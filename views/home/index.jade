@@ -1,0 +1,11 @@
+extends ../template/layout
+
+block content
+  .row
+    .small-12.columns
+      h1 Send Email From The Backend In Node.js
+      input#to(value= 'petedunlap@gmail', type= "text", autofocus = true, placeholder= "pindrop@amy.com")
+      input#subject(type= "text", placeholder= "Type subject here")
+      input#message(type= "text", placeholder= "Type message here")
+      input#sendEmail.button.large(type= "button", value="Send Email")
+
