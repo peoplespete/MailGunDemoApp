@@ -19,9 +19,11 @@ exports.mail = function(req, res){
     req.body.message,
     'noreply@example.com', {},
     function(err) {
-      if (err) console.log('Oh noes: ' + err);
-      else     console.log('Success');
-      res.send();
+      var result = {};
+      if (err) result.status = 'Oh noes: ' + err;
+      else     result.status = 'Success';
+      console.log(result);
+      res.send(result);
   });
 
 };

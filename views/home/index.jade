@@ -4,8 +4,12 @@ block content
   .row
     .small-12.columns
       h1 Send Email From The Backend In Node.js
-      input#to(value= 'petedunlap@gmail', type= "text", autofocus = true, placeholder= "pindrop@amy.com")
-      input#subject(type= "text", placeholder= "Type subject here")
-      input#message(type= "text", placeholder= "Type message here")
-      input#sendEmail.button.large(type= "button", value="Send Email")
+      .row
+        .small-4.columns
+          input#to(type= "email", autofocus = true, placeholder= "pindrop@amy.com")
+        .small-8.columns
+          input#subject(type= "text", placeholder= "Type subject here")
+      textarea#message(placeholder= "Type message here")
+      input#sendEmail.button.large.radius.left(type= "button", value="Send Email")
+      input#resetEmail.button.radius.alert.right(type= "button", value="Reset")
 
